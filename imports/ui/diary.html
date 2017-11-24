@@ -1,0 +1,21 @@
+<template name="diary">
+  <li class="{{#if checked}}checked{{/if}} {{#if private}}private{{/if}}">
+    <button class="delete">&times;</button>
+
+    <input type="checkbox" checked="{{checked}}" class="toggle-checked" />
+
+    {{#if isOwner}}
+      <button class="btn btn-primary" id="toggle-private">
+        {{#if private}}
+          Private entry
+        {{else}}
+          Public entry
+        {{/if}}
+      </button>
+    {{/if}}
+
+    <span class="text">Written by {{username}} on {{createdAt}}</span>
+    <p></p>
+    <p>{{text}}</p>
+  </li>
+</template>
