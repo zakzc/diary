@@ -1,0 +1,20 @@
+<template name="sidebar">
+	<aside class="sidebar-left">
+	<img src="logo.png" class="icon">
+	<a class="company-logo" href="#">The Diary App</a>
+		<div class="sidebar-links">
+			{{#if currentUser}}
+				<a class="link-white" href="/private" id="private-link"><i class="fa fa-user"></i>Private entries</a>
+				<a class="link-white" href="/entryForm" id="entryForm-link"><i class="fa fa-pencil"></i>Write</a>
+			{{else}}
+			{{/if}}
+				<a class="link-white" href="/diary" id="diary-link"><i class="fa fa-book"></i>Diary</a>
+			<!-- <a class="link-green" href="/search" id="search-link"><i class="fa fa-search"></i>Search</a> -->
+			{{#if currentUser}}
+			<a class="link-brown" href="#" id="logout-link"><i class="fa fa-sign-out"></i>Logout</a>
+			{{else}}
+			<a class="" href="/" id="login-link"><i class="fa fa-sign-in"></i>Login</a>
+			{{/if}}
+		</div>
+	</aside>
+</template>

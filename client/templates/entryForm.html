@@ -1,0 +1,29 @@
+<template name="entryForm">
+	{{#if currentUser}}
+	<!-- Joke Form-->
+	<div id="entryForm-wrap">
+		<center>
+			<form class="entry-post">
+				<h2 class="entryForm-heading">Add a new entry to the diary</h2>
+				<label for="entryName" class="sr-only">Subject or title</label>
+				<input type="text" name="entryName" id="entryName" class="form-control" placeholder="Subject or title" maxlength="40">
+				<label for="entryPost" class="sr-only">Contents (max. 150 characters)</label>
+				<input type="text" name="entryPost" id="entryPost" size="150" class="form-control" placeholder="Contents" maxlength="150">
+				<button class="btn btn-lg btn-success btn-block" type="submit">Add it to the diary</button>
+			</form>
+		</center>
+	</div>
+	<!-- End Joke Form-->
+	{{else}}
+	<!-- Joke Form-->
+	<div id="entryForm-wrap">
+		<center>
+			<form class="entry-post">
+				<h2 class="form-signin-heading">Log In to use the diary</h2>
+				<a href="/" class="btn btn-md btn-primary" id="login-redir">Login</a>
+			</form>
+		</center>
+	</div>
+	<!-- End Joke Form-->
+	{{/if}}
+</template>

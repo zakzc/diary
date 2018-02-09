@@ -1,0 +1,27 @@
+<template name="private">
+
+{{#if currentUser}}
+
+	{{#each userEntries}}
+	<!-- Diary-->
+	<div class="diary">
+		<div class="row">
+			<div class=".col-sm-6 .col-md-5 .col-lg-6" id="info">
+				<h1 class="entry-title">{{entryName}}</h1>
+				<p class="meta">Author: {{author}}</p>
+				<p class="meta">Posted On: {{date}}</p>
+			</div>
+		</div>
+		<p class="entry-title">"{{entryPost}}"</p>
+
+		<button class="btn btn-sml btn-danger" id="delete-entry">Delete this entry</button>
+
+	</div>
+	{{/each}}
+	<!-- End Joke -->
+{{else}}
+	<h1>Nothing to display</h1>
+
+{{/if}}
+
+</template>
