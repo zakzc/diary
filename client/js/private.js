@@ -36,7 +36,7 @@ Template.private.helpers({
 Template.private.events({
 	"click #delete-entry": function() {
 		Meteor.call("removeEntry", this._id);
-		Bert.alert("Your Joke Was Deleted", "success", "growl-top-right");
+		Bert.alert("Your entry was successfully deleted", "success", "growl-top-right");
 	},
 
 });
