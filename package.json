@@ -1,0 +1,11 @@
+{
+  "name": "Diary App",
+  "private": true,
+  "scripts": {
+    "start": "meteor run"
+  },
+  "dependencies": {
+    "bcrypt": "^1.0.3",
+    "meteor-node-stubs": "~0.2.0"
+  }
+}
